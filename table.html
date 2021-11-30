@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function generateTable() {
+            var num = document.getElementById("table").value;
+            if (num > 0){
+                var myString = "";
+                for (a = 1 ; a <= 10 ; a++){
+                    myString += num + " x " + a + " = " + a * num + " <br> ";
+                }
+                document.getElementById("demo").innerHTML = myString;
+            } else {
+                alert("please enter a number");
+            }
+        }
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+            background-color: gray;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 5em;
+            color: darkolivegreen;
+        }
+        .dtable {
+            display: inline-block;
+            margin: 0 0 0 43%;
+        }
+        #table {
+            width: 250px;
+            height: 25px;
+            border-radius: 25px;
+            border: none;
+            background-color: burlywood;
+            padding-left: 15px;
+        }
+        .dtable1 {
+            display: inline-block;
+            margin: 50px 0 0 46%;
+        }
+        button {
+            width: 125px;
+            height: 25px;
+            background-color: darkcyan;
+            border: none;
+            border-radius: 25px;
+        }
+        h5 {
+            text-align: center;
+            font-size: 2.5em;
+            color: navy;
+        }
+    </style>
+</head>
+<body>
+    <h1> Table Sheet </h1>
+    <div class="dtable">
+        <input type="text" id="table">
+    </div>
+    <br>
+    <div class="dtable1">
+        <button class="start" onclick="generateTable()">Start</button>
+    </div>
+    <h5 id="demo"></h5>
+</body>
+</html>
